@@ -17,7 +17,7 @@ export default function Post({data}) {
       <iframe src={movie.url} className="w-screen h-screen" allowFullScreen />
       <h1 className="pl-5 text-3xl pt-8 w-1/2">{movie.title}</h1>
       <div className="bg-zinc-800 m-5 rounded-3xl">
-        <p className="p-6">{movie.description}</p>
+        <p className="pt-6 pb-6 pl-4 pr-4">{movie.description}</p>
       </div>
     </div>
   );
