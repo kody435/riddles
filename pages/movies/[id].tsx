@@ -13,30 +13,10 @@ interface Props {
 function NFTDropPage({ collection }: Props) {
     return (
     <div className='flex h-screen w-screen'>
-        <iframe id="iframe" src={collection.url} allowFullScreen width="100%" height="100%"></iframe>
+            <iframe id="iframe" src={collection.url} allowFullScreen width="100%" height="100%"></iframe>
+            <h1>{collection.title}</h1>
     </div>
   )
 }
 
 export default NFTDropPage
-
-export const getServerSideProps: GetServerSideProps = async () =>
-{
-  const query = `
-    *[_type == 'movies']{
-      title,
-      slug,
-      description,
-      url,
-      image
-    }
-  `
-
-  const collections = await sanityClient.fetch(query)
-
-  return {
-    props: {
-      collections,
-    }
-  }
-}
