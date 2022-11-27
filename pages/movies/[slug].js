@@ -2,6 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { sanityClient } from '../../sanity'
 import { useRouter } from 'next/router'
+import React from 'react';
 
 const recipeQuery = `*[_type == 'movies' && slug.current == $slug][0]{
   title,
@@ -41,7 +42,7 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: true
+    fallback: false
   }
 }
 
