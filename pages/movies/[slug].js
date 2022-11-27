@@ -14,11 +14,13 @@ export default function Post({data}) {
   const { movie } = data;
   return (
     <div>
-      <iframe src={movie.url} className="w-screen h-96" allowFullScreen />
-      <h1>{movie.title}</h1>
-      <p>{movie.description}</p>
+      <iframe src={movie.url} className="w-screen h-screen" allowFullScreen />
+      <h1 className="pl-5 text-3xl pt-8 w-1/2">{movie.title}</h1>
+      <div className="bg-zinc-800 m-5 rounded-3xl">
+        <p className="p-4">{movie.description}</p>
+      </div>
     </div>
-  )
+  );
 }
 
 export async function getStaticPaths() {
