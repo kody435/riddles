@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
-import {sanityClient} from '../../sanity'
+import { sanityClient } from '../../sanity'
+import { useRouter } from 'next/router'
 
 const recipeQuery = `*[_type == 'movies' && slug.current == $slug][0]{
   title,
@@ -12,6 +13,12 @@ const recipeQuery = `*[_type == 'movies' && slug.current == $slug][0]{
 
 export default function Post({data}) {
   const { movie } = data;
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <div className='text-white text-4xl align-center'>Loading...</div>;
+  }
+
   return (
     <div>
       <iframe src={movie.url} className="w-screen h-screen" allowFullScreen />
