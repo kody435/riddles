@@ -7,6 +7,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import {sanityClient} from '../sanity'
 import { Collection } from '../typings'
+import styles from '../styles/Home.module.css'
 
 interface Props {
   collections: Collection[]
@@ -21,14 +22,12 @@ const Home = ({ collections }: Props) => {
       </Head>
       <h1 className='mb-14 text-4xl font-extralight text-white' >The <span className='font-extrabold'>OCTULUS</span></h1>
 
-        <div className='grid lg:grid-cols-7 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-7'>
+        <div className='Wrapper'>
           {collections.map(collection => (
-            <Link href={`/movies/${collection.slug.current}`} className=" mb-24">
-            <div className=' flex flex-row'>
-                <div className='h-52 w-40 bg-slate-500 '>
+            <Link href={`/movies/${collection.slug.current}`} className="link">
+            <div className='wrap-div'>
                   <img className='' src={collection.image} />
                   <h2 className=''>{collection.title}</h2>
-              </div>
             </div>
             </Link>
           ))}
