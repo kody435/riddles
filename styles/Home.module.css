@@ -1,0 +1,32 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.Wrapper {
+  width: max-content;
+  margin-left:2.5vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.wrap_div{
+  width: fit-content;
+  height: fit-content;
+}
+
+.h2 {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 550px) {
+  .Wrapper {
+    width: 40vw;
+    display: grid;
+    grid-template-columns: 45vw 45vw;
+    margin-right:5vw;
+  }
+}
