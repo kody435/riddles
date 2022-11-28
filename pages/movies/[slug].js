@@ -9,7 +9,8 @@ const recipeQuery = `*[_type == 'movies' && slug.current == $slug][0]{
   slug,
   description,
   url,
-  image
+  image,
+  releaseDate,
 }`;
 
 export default function Post({data}) {
@@ -25,7 +26,7 @@ export default function Post({data}) {
       <iframe src={movie.url} className="w-screen h-screen" allowFullScreen />
       <h1 className="pl-5 text-3xl pt-8 w-screen mr-2">{movie.title}</h1>
       <div className="bg-zinc-800 m-5 rounded-3xl">
-        <p className="pt-6 pb-6 pl-4 pr-4">{movie.description}</p>
+        <p className="pt-6 pb-6 pl-4 pr-4"><span className='font-extrabold'>The Storyline</span> : {movie.description}<br></br><br></br><span className='font-extrabold'>Release Date</span> : {movie.releaseDate}</p>
       </div>
     </div>
   );

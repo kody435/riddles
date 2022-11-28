@@ -24,7 +24,7 @@ const Home = ({ collections }: Props) => {
 
         <div className={styles.Wrapper}>
           {collections.map(collection => (
-            <Link href={`/movies/${collection.slug.current}`} className={styles.link}>
+            <Link href={`/movies/${collection.slug.current}`} className="m-2">
             <div className={styles.wrap_div}>
                   <img className={styles.img} src={collection.image} />
                   <h2 className={styles.h2}>{collection.title}</h2>

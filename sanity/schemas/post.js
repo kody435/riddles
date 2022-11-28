@@ -38,5 +38,10 @@ export default {
       title: "Description",
       type: "string",
     },
+    {
+      name: "releaseDate",
+      title: "Release Date",
+      type: "string",
+    }
   ],
 };
