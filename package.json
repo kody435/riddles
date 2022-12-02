@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@sanity/client": "^3.4.1",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",

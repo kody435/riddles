@@ -15,7 +15,7 @@ interface Props {
 
 const Home = ({ collections }: Props) => {
   return (
-    <div className={styles.main} >
+    <div className={styles.main}  >
       <Head>
         <title>OCTULUS</title>
         <meta name="description" content="WebApp made by Param Patel, to watch Movies" />
