@@ -2,6 +2,8 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { useLayoutEffect, useState } from "react";
 import { Loader } from "../components/Loader";
+import {motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -17,10 +19,38 @@ export default function App({ Component, pageProps }: AppProps) {
     setTimeout(() => setIsLoading(false), 1400);
   }, []);
 
+  const router = useRouter();
+
   return (
     <>
       <Loader onTransitionEnd={handleTransitionEnd} isLoading={isLoading} />
-      <Component {...pageProps} />
+      <AnimatePresence exitBeforeEnter>
+        <motion.div
+          key={router.route}
+          initial="initialState"
+          animate="animateState"
+          exit="exitState"
+          transition={{ duration: 0.75 }}
+          variants={
+            {
+              initialState: {
+                opacity: 0,
+                clipPath :"Polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+              },
+              animateState: {
+                opacity: 1,
+                clipPath :"Polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+              },
+              exitState: {
+                opacity: 0,
+                clipPath :"Polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+              },
+            }
+          }
+        >
+          <Component {...pageProps} />
+        </motion.div>
+      </AnimatePresence>
     </>
   );
 }
