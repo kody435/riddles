@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { useLayoutEffect, useState } from "react";
-import { Loader } from "./loader";
+import { Loader } from "../components/Loader";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isLoading, setIsLoading] = useState<boolean>(true);

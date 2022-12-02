@@ -21,7 +21,7 @@ const Home = ({ collections }: Props) => {
         <meta name="description" content="WebApp made by Param Patel, to watch Movies" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className='mb-14 text-4xl font-extralight pl-4 pt-6 text-white' >The <span className='font-extrabold'>OCTULUS</span></h1>
+      <Link href="/"><h1 className='mb-14 text-4xl font-extralight pl-4 pt-6 text-white' >The <span className='font-extrabold'>OCTULUS</span></h1></Link>
 
         <div className={styles.Wrapper}>
           {collections.map(collection => (
