@@ -25,14 +25,6 @@
   font-weight: 600;
 }
 
-.img{
-  border-radius: 20px;
-}
-
-.img:hover {
-  opacity: 0.75;
-}
-
 @media screen and (max-width: 550px) {
   .Wrapper {
     width: 40vw;

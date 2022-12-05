@@ -28,8 +28,8 @@ const Home = ({ collections }: Props) => {
           {collections.map(collection => (
             <Link href={`/movies/${collection.slug.current}`} className="shadow-lg rounded-lg">
               <div className="text-center">
-                    <img className={styles.img} src={collection.image} />
-                    <h2 className={styles.h2}>{collection.title}</h2>
+                    <img className="rounded-lg hover:opacity-75 opacity-100" src={collection.image} />
+                    <h2 className="text-white font-bolder text-md  ">{collection.title}</h2>
               </div>
             </Link>
           ))}

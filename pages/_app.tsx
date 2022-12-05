@@ -4,6 +4,7 @@ import { useLayoutEffect, useState } from "react";
 import { Loader } from "../components/Loader";
 import {motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -51,6 +52,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </motion.div>
       </AnimatePresence>
+      <Analytics />
     </>
   );
 }

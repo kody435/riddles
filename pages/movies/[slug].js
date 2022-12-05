@@ -29,7 +29,7 @@ export default function Post({data}) {
         {movie.title}
       </h1>
       <div className="bg-zinc-800 m-5 rounded-3xl text-white">
-        <p className="pt-6 pb-6 pl-4 pr-4">
+        <p className="pt-6 pb-6 pl-4 pr-4 ">
           <span className="font-extrabold">The Storyline</span> :{" "}
           {movie.description}
           <br></br>
