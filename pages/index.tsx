@@ -23,16 +23,18 @@ const Home = ({ collections }: Props) => {
       </Head>
       <Link href="/"><h1 className='mb-14 text-4xl font-extralight pl-4 pt-6 text-white' >The <span className='font-extrabold'>OCTULUS</span></h1></Link>
 
-        <div className={styles.Wrapper}>
+      <main className='container mx-auto py-10 px-4'>
+        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
           {collections.map(collection => (
-            <Link href={`/movies/${collection.slug.current}`} className="m-2">
-            <div className={styles.wrap_div}>
-                  <img className={styles.img} src={collection.image} />
-                  <h2 className={styles.h2}>{collection.title}</h2>
-            </div>
+            <Link href={`/movies/${collection.slug.current}`} className="shadow-lg rounded-lg">
+              <div className="text-center">
+                    <img className={styles.img} src={collection.image} />
+                    <h2 className={styles.h2}>{collection.title}</h2>
+              </div>
             </Link>
           ))}
         </div>
+      </main>
     </div>
   )
 }
