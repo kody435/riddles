@@ -40,7 +40,7 @@ export default {
     },
     {
       name: "releaseDate",
-      title: "Release Date",
+      title: "Release Year",
       type: "string",
     }
   ],

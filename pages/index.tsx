@@ -42,12 +42,13 @@ export default Home
 export const getServerSideProps: GetServerSideProps = async () =>
 {
   const query = `
-    *[_type == 'movies'] | order(title) [0...10]{
+    *[_type == 'movies']{
       title,
       slug,
       description,
       url,
-      image
+      image,
+      releaseYear
     }
   `
 

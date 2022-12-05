@@ -7,4 +7,5 @@ export interface Collection {
         current: string;
     };
     image: string;
+    releaseYear : string;
 }
