@@ -1,6 +1,7 @@
 .main {
   display: flex;
   flex-direction: column;
+  background-color: black;
 }
 
 .Wrapper {
@@ -13,8 +14,9 @@
 }
 
 .wrap_div{
-  width: fit-content;
-  height: fit-content;
+  border-radius: 30px;
+  background-color: antiquewhite;
+  color: aquamarine;
 }
 
 .h2 {

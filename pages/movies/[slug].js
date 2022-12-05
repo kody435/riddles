@@ -3,6 +3,7 @@
 import { sanityClient } from '../../sanity'
 import { useRouter } from 'next/router'
 import React from 'react';
+import styles from '../../styles/Home.module.css'
 
 const recipeQuery = `*[_type == 'movies' && slug.current == $slug][0]{
   title,
@@ -22,11 +23,20 @@ export default function Post({data}) {
   }
 
   return (
-    <div>
+    <div className={styles.main}>
       <iframe src={movie.url} className="w-screen h-screen" allowFullScreen />
-      <h1 className="pl-5 text-3xl pt-8 w-screen mr-2 text-white">{movie.title}</h1>
+      <h1 className="pl-5 text-3xl pt-8 w-screen mr-2 text-white">
+        {movie.title}
+      </h1>
       <div className="bg-zinc-800 m-5 rounded-3xl text-white">
-        <p className="pt-6 pb-6 pl-4 pr-4"><span className='font-extrabold'>The Storyline</span> : {movie.description}<br></br><br></br><span className='font-extrabold'>Release Year</span> : {movie.releaseDate}</p>
+        <p className="pt-6 pb-6 pl-4 pr-4">
+          <span className="font-extrabold">The Storyline</span> :{" "}
+          {movie.description}
+          <br></br>
+          <br></br>
+          <span className="font-extrabold">Release Year</span> :{" "}
+          {movie.releaseDate}
+        </p>
       </div>
     </div>
   );
