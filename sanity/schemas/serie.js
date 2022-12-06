@@ -23,9 +23,10 @@ export default {
       type: "string",
     },
     {
-      name: "url",
-      title: "URL",
-      type: "string",
+      title: 'Url',
+      name: 'url',
+      type: 'array',
+      of: [{type: 'string'}]
     },
     {
       name: "categories",

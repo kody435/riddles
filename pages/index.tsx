@@ -21,44 +21,14 @@ const Home = ({ collections }: Props) => {
         <meta name="description" content="WebApp made by Param Patel, to watch Movies" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Link href="/"><h1 className='mb-14 text-4xl font-extralight pl-4 pt-6 text-white' >The <span className='font-extrabold'>OCTULUS</span></h1></Link>
-
-      <main className='container mx-auto py-10 px-4'>
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6">
-          {collections.map(collection => (
-            <Link href={`/movies/${collection.slug.current}`} className="shadow-lg rounded-lg">
-              <div className="text-center">
-                    <img className="rounded-lg hover:opacity-75 opacity-100" src={collection.image} />
-                    <h2 className="text-white font-bolder text-md  ">{collection.title}</h2>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </main>
+          
+        <main className=''>
+            <Link href="/"><h1 className='mb-14 text-4xl font-extralight pl-4 pt-6 text-white' >The <span className='font-extrabold'>OCTULUS</span></h1></Link>
+            <h2 className='text-2xl font-bolder lg:text-4xl pl-4 text-white'>Movies</h2>
+            <h2 className='text-2xl lg:text-4xl font-bolder pl-4 text-white'>Series</h2>
+        </main>
     </div>
   )
 }
 
 export default Home
-
-export const getServerSideProps: GetServerSideProps = async () =>
-{
-  const query = `
-    *[_type == 'movies']{
-      title,
-      slug,
-      description,
-      url,
-      image,
-      releaseYear
-    }
-  `
-
-  const collections = await sanityClient.fetch(query)
-
-  return {
-    props: {
-      collections,
-    }
-  }
-}
