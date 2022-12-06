@@ -39,7 +39,7 @@ export default movies
 export const getServerSideProps: GetServerSideProps = async () =>
 {
   const query = `
-    *[_type == 'movies']{
+    *[_type == 'series']{
       title,
       slug,
       description,

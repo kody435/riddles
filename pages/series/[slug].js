@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
-import { sanityClient } from "../../sanity";
-import { useRouter } from "next/router";
-import React from "react";
-import styles from "../../styles/Home.module.css";
+import { sanityClient } from '../../sanity'
+import { useRouter } from 'next/router'
+import React from 'react';
+import styles from '../../styles/Home.module.css'
 
-const recipeQuery = `*[_type == 'movies' && slug.current == $slug][0]{
+const recipeQuery = `*[_type == 'series' && slug.current == $slug][0]{
   title,
   slug,
   description,
@@ -14,12 +14,12 @@ const recipeQuery = `*[_type == 'movies' && slug.current == $slug][0]{
   releaseDate,
 }`;
 
-export default function Post({ data }) {
+export default function Post({data}) {
   const { movie } = data;
   const router = useRouter();
 
   if (router.isFallback) {
-    return <div className="text-white text-4xl align-center">Loading...</div>;
+    return <div className='text-white text-4xl align-center'>Loading...</div>;
   }
 
   return (
@@ -44,17 +44,17 @@ export default function Post({ data }) {
 
 export async function getStaticPaths() {
   const paths = await sanityClient.fetch(
-    `*[_type == "movies" && defined(slug.current)]{
+    `*[_type == "series" && defined(slug.current)]{
       "params": {
         "slug": slug.current
       }
     }`
-  );
+  )
 
   return {
     paths,
-    fallback: false,
-  };
+    fallback: false
+  }
 }
 
 export async function getStaticProps({ params }) {
@@ -62,7 +62,7 @@ export async function getStaticProps({ params }) {
   const movie = await sanityClient.fetch(recipeQuery, { slug });
   return {
     props: {
-      data: { movie },
-    },
-  };
+      data: { movie }
+    }
+  }
 }
