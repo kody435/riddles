@@ -5,7 +5,6 @@ import React from 'react';
 import type { NextPage , GetServerSideProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import {sanityClient} from '../sanity'
 import { Collection } from '../typings'
 import styles from '../styles/Home.module.css'
 
