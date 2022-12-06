@@ -15,18 +15,30 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
           
-        <main className={styles.index}>
-            <Link href="/"><h1 className='mb-14 text-4xl font-extralight pl-4 pt-6 text-white' >The <span className='font-extrabold'>OCTULUS</span></h1></Link>
-              <Link href="/movies">
-                  <h2 className='text-2xl font-bolder lg:text-4xl pl-4 text-white'>Movies</h2>
-              </Link>
-            
-              <Link href="/series">
-                  <h2 className='text-2xl lg:text-4xl font-bolder pl-4 text-white'>Series</h2>
-              </Link>
+          <main className={styles.index}>
+              <div className='flex flex-col text-center h-screen w-screen'>
+                  <div className='pb-6 text-3xl md:text-4xl font-extralight pt-6'>
+                    <Link href="/">
+                      <h1 className='0'>The <span className='font-extrabold'>OCTULUS</span></h1>
+                    </Link>
+                  </div>
+                  <div className='flex md:flex-row flex-col items-center height-screen place-content-center w-screen h-screen justify-evenly'>
+                    <Link href="/movies" className='flex p-5 hover:bg-white  rounded-3xl '>
+                        <h2 className='text-5xl font-extrabold lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-teal-400'>Movies</h2>
+                    </Link>
+                    <Link href="/series" className='flex p-5 hover:bg-white rounded-3xl '>
+                        <h2 className='text-5xl font-extrabold lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-blue-500'>Series</h2>
+                    </Link>
+                  </div>
+            </div>
         </main>
     </div>
   )
 }
 
 export default Home
+
+{/* 
+background-color: #FEE140;
+background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
+*/}
