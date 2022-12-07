@@ -3,7 +3,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import type { NextPage , GetServerSideProps } from 'next'
-import Head from 'next/head'
 import Link from 'next/link'
 import {sanityClient} from '../sanity'
 import { Collection } from '../typings'
@@ -21,7 +20,7 @@ const movies = ({ collections }: Props) => {
       <main className='container mx-auto py-10 px-4'>
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6">
           {collections.map(collection => (
-            <Link href={`/movies/${collection.slug.current}`} className="shadow-lg rounded-lg">
+            <Link href={`/series/${collection.slug.current}`} className="shadow-lg rounded-lg">
               <div className="text-center">
                     <img className="rounded-lg hover:opacity-75 opacity-100" src={collection.image} />
                     <h2 className="text-white font-bolder text-md  ">{collection.title}</h2>
