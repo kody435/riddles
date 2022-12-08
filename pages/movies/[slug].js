@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import { sanityClient } from '../../sanity'
-import { useRouter } from 'next/router'
 import React from 'react';
 import styles from '../../styles/Home.module.css'
 
@@ -16,11 +15,6 @@ const recipeQuery = `*[_type == 'movies' && slug.current == $slug][0]{
 
 export default function Post({data}) {
   const { movie } = data;
-  const router = useRouter();
-
-  if (router.isFallback) {
-    return <div className='text-white text-4xl align-center'>Loading...</div>;
-  }
 
   return (
     <div className={styles.main}>

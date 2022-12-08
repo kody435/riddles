@@ -27,7 +27,7 @@ const Home = () => {
                         <h2 className='text-5xl font-extrabold lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-teal-400'>Movies</h2>
                     </Link>
                     <Link href="/series" className='flex p-5 hover:bg-white rounded-3xl '>
-                        <h2 className='text-5xl font-extrabold lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-blue-500'>Series</h2>
+                        <h2 className='text-5xl font-extrabold lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-blue-400'>Series</h2>
                     </Link>
                   </div>
             </div>

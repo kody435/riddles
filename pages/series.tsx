@@ -14,9 +14,8 @@ interface Props {
 
 const movies = ({ collections }: Props) => {
   return (
-    <div className={styles.main} >
+    <div className={styles.main}>
       <Link href="/"><h1 className='mb-14 text-4xl font-extralight pl-4 pt-6 text-white' >The <span className='font-extrabold'>OCTULUS</span></h1></Link>
-      
       <main className='container mx-auto py-10 px-4'>
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6">
           {collections.map(collection => (
