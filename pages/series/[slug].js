@@ -21,12 +21,12 @@ export default function Post({ data }) {
 
   return (
     <div className={styles.main}>
-      <iframe src={serie.url} className="w-screen h-screen" allowFullScreen />
+      <iframe src={url} className="w-screen h-screen" allowFullScreen />
       <div className="m-10 flex flex-row space-x-3">
         {serie.url.map((oneUrl, index) => (
-          <Link href={oneUrl} key={oneUrl} className="p-4 border-2 rounded-xl">
-            <div>{`${index + 1}`}</div>
-          </Link>
+          <button key={oneUrl} className="p-4 border-2 rounded-xl">
+            {`${index + 1}`}
+          </button>
         ))}
       </div>
       <h1 className="pl-5 text-3xl pt-8 w-screen mr-2 text-white">
