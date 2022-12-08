@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import { sanityClient } from "../../sanity";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../styles/Home.module.css";
 import Link from "next/link";
 
@@ -17,12 +17,13 @@ const recipeQuery = `*[_type == 'series' && slug.current == $slug][0]{
 
 export default function Post({ data }) {
   const { serie } = data;
-  const [url, setUrl] = React.useState(serie.url[0]);
+  const [url, setUrl] = React.useState(serie.url[3]);
 
   // function to handle the click event of the button and
   // pass the url to the iframe src
-  const handleClick = (val) => {
+  const handleClick = async (val) => {
     setUrl(val);
+    console.log(val)
   };
 
   return (
