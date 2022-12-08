@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import { sanityClient } from "../../sanity";
-import React , {useState} from "react";
+import React, { useState } from "react";
 import styles from "../../styles/Home.module.css";
 import Link from "next/link";
 
@@ -19,12 +19,22 @@ export default function Post({ data }) {
   const { serie } = data;
   const [url, setUrl] = React.useState(serie.url[0]);
 
+  // function to handle the click event of the button and
+  // pass the url to the iframe src
+  const handleClick = (val) => {
+    setUrl(val);
+  };
+
   return (
     <div className={styles.main}>
       <iframe src={url} className="w-screen h-screen" allowFullScreen />
       <div className="m-10 flex flex-row space-x-3">
         {serie.url.map((oneUrl, index) => (
-          <button key={oneUrl} className="p-4 border-2 rounded-xl">
+          <button
+            key={oneUrl}
+            onClick={() => handleClick(oneUrl)}
+            className="p-4 border-2 rounded-xl"
+          >
             {`${index + 1}`}
           </button>
         ))}
