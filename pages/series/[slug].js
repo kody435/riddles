@@ -28,7 +28,7 @@ export default function Post({ data }) {
   return (
     <div className={styles.main}>
       <iframe src={url} className="w-screen h-screen " allowFullScreen />
-      <div className="grid grid-cols-4 md:grid-cols-7 lg:grid-cols-12 space-x-3 pt-5">
+      <div className="grid text-white grid-cols-4 md:grid-cols-7 lg:grid-cols-12 space-x-3 pt-5">
         {serie.url.map((oneUrl, index) => (
           <button
             key={oneUrl}
