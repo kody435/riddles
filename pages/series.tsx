@@ -22,7 +22,7 @@ const movies = ({ collections }: Props) => {
           {collections.map(collection => (
             <Link href={`/series/${collection.slug.current}`} className="shadow-lg rounded-lg">
               <div className="text-center">
-                    <Image alt="" className="rounded-lg hover:opacity-75 opacity-100" src={collection.image} loading="lazy" />
+                    <Image alt="" className="rounded-lg hover:opacity-75 opacity-100" src={collection.image} loading="lazy" width={100} height={100} />
                     <h2 className="text-white font-bolder text-md  ">{collection.title}</h2>
               </div>
             </Link>
