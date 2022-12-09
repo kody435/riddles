@@ -2,11 +2,12 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
-import type { NextPage , GetServerSideProps } from 'next'
+import type { GetServerSideProps } from 'next'
 import Link from 'next/link'
 import {sanityClient} from '../sanity'
 import { Collection } from '../typings'
 import styles from '../styles/Home.module.css'
+import Image from "next/image";
 
 interface Props {
   collections: Collection[]
@@ -21,7 +22,7 @@ const movies = ({ collections }: Props) => {
           {collections.map(collection => (
             <Link href={`/series/${collection.slug.current}`} className="shadow-lg rounded-lg">
               <div className="text-center">
-                    <img className="rounded-lg hover:opacity-75 opacity-100" src={collection.image} />
+                    <Image alt="" className="rounded-lg hover:opacity-75 opacity-100" src={collection.image} loading="lazy" />
                     <h2 className="text-white font-bolder text-md  ">{collection.title}</h2>
               </div>
             </Link>

@@ -4,7 +4,6 @@
 import { sanityClient } from "../../sanity";
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/Home.module.css";
-import Link from "next/link";
 
 const recipeQuery = `*[_type == 'series' && slug.current == $slug][0]{
   title,
