@@ -27,13 +27,13 @@ export default function Post({ data }) {
 
   return (
     <div className={styles.main}>
-      <iframe src={url} className="w-screen h-screen" allowFullScreen />
-      <div className="m-10 flex flex-row space-x-3">
+      <iframe src={url} className="w-screen h-screen " allowFullScreen />
+      <div className="grid grid-cols-10 space-x-3 pt-5">
         {serie.url.map((oneUrl, index) => (
           <button
             key={oneUrl}
             onClick={() => handleClick(oneUrl)}
-            className={`p-4 border-2 rounded-xl ${oneUrl===url?"border-green-400":""}`}
+            className={`p-4 border-2 rounded-3xl ${oneUrl===url?"border-green-400":""}`}
           >
             {`${index + 1}`}
           </button>
