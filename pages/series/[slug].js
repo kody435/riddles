@@ -33,7 +33,7 @@ export default function Post({ data }) {
           <button
             key={oneUrl}
             onClick={() => handleClick(oneUrl)}
-            className={`p-4 border-2 rounded-xl ${oneUrl === url ? "border-green-400" : ""}`}
+            className={`p-4 border-2 rounded-xl ${oneUrl===url?"border-green-400":""}`}
           >
             {`${index + 1}`}
           </button>
