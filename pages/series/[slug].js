@@ -16,13 +16,13 @@ const recipeQuery = `*[_type == 'series' && slug.current == $slug][0]{
 
 export default function Post({ data }) {
   const { serie } = data;
-  const [url, setUrl] = React.useState(serie.url[3]);
+  const [url, setUrl] = React.useState(serie.url[0]);
 
   // function to handle the click event of the button and
   // pass the url to the iframe src
   const handleClick = async (val) => {
     setUrl(val);
-    console.log(val)
+    alert(val)
   };
 
   return (
