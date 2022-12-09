@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Loader onTransitionEnd={handleTransitionEnd} isLoading={isLoading} />
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence>
         <motion.div
           key={router.route}
           initial="initialState"
