@@ -10,7 +10,6 @@ export default function App({ Component, pageProps }: AppProps) {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const handleTransitionEnd = () => {
-    console.log("animation end!");
     const root = document.getElementById("__next");
     const loader = document.getElementById("loader");
     root?.removeChild(loader!);
