@@ -23,11 +23,14 @@ const Home = () => {
                     </Link>
                   </div>
                   <div className='flex md:flex-row flex-col items-center height-screen place-content-center w-screen h-screen justify-evenly'>
-                    <Link href="/movies" className='flex p-5 hover:bg-white  rounded-3xl '>
-                        <h2 className='text-5xl font-extrabold lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-teal-400'>Movies</h2>
+                    <Link href="/movies" className='flex p-2 hover:bg-white  rounded-3xl '>
+                        <h2 className='text-5xl p-4 font-extrabold lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-teal-400'>Movies</h2>
                     </Link>
-                    <Link href="/series" className='flex p-5 hover:bg-white rounded-3xl '>
-                        <h2 className='text-5xl font-extrabold lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-blue-400'>Series</h2>
+                    <Link href="/series" className='flex p-2 hover:bg-white rounded-3xl '>
+                        <h2 className='text-5xl p-4 font-extrabold lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-blue-400'>Series</h2>
+                    </Link>
+                    <Link href="/categories" className='flex p-2 hover:bg-white rounded-3xl '>
+                        <h2 className='text-5xl p-4 font-extrabold lg:text-6xl bg-clip-text text-transparent bg-gradient-to-l from-yellow-400 to-red-500'>Categories</h2>
                     </Link>
                   </div>
             </div>

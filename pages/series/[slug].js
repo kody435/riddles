@@ -30,11 +30,7 @@ export default function Post({ data }) {
       <iframe src={url} className="w-screen h-screen " allowFullScreen />
       <div className="grid text-white grid-cols-4 md:grid-cols-7 lg:grid-cols-12 space-x-3 pt-5">
         {serie.url.map((oneUrl, index) => (
-          <button
-            key={oneUrl}
-            onClick={() => handleClick(oneUrl)}
-            className={`p-4 mt-4 border-2 rounded-3xl ${oneUrl===url?"border-green-400":"border-none"}`}
-          >
+          <button key={oneUrl} onClick={() => handleClick(oneUrl)} className={`p-4 mt-4 border-2 rounded-3xl ${oneUrl===url?"border-green-400":"border-none"}`}>
             {`${index + 1}`}
           </button>
         ))}
@@ -64,7 +60,6 @@ export async function getStaticPaths() {
       }
     }`
   );
-
   return {
     paths,
     fallback: false,

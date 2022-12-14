@@ -8,5 +8,13 @@ export default {
       title: 'Title',
       type: 'string',
     },
+    {
+      name: 'mainImg',
+      title: 'Main image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }
   ],
 }
