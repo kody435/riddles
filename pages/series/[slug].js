@@ -22,7 +22,6 @@ export default function Post({ data }) {
   // pass the url to the iframe src
   const handleClick = async (val) => {
     setUrl(val);
-    console.log(val)
   };
 
   return (
