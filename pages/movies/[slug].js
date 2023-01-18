@@ -51,12 +51,12 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getServerSideProps({ query }) {
-  const db = new SDK({
-    contractTxId: "NK6_OUCdQo3RbXMjBFJXIyZPBa4mgeIr_8bwHPCPtp8",
-    rpc: "localhost:8080", // your.remote.node:443
-  });
+export async function getStaticProps({ params }) {
+  const { slug } = params;
+  const movie = await sanityClient.fetch(recipeQuery, { slug });
   return {
-    props: { question: await db.get("Questions", query.id) },
-  };
+    props: {
+      data: { movie }
+    }
+  }
 }

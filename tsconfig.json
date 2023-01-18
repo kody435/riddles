@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true,
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/movies/[slug].js", "pages/search.tsx", "pages/series/[slug].js", "pages/movies.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/movies/[slug].js", "pages/search.tsx", "pages/series/[slug].js"],
   "exclude": ["node_modules"]
 }
