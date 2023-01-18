@@ -2,18 +2,13 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
-import type { NextPage , GetServerSideProps } from 'next'
 import Link from 'next/link'
 import Image from "next/image";
 import {sanityClient} from '../sanity'
-import { Collection } from '../typings'
 import styles from '../styles/Home.module.css'
 
-interface Props {
-  collections: Collection[]
-}
 
-const movies = ({ collections }: Props) => {
+const movies = () => {
   return (
     <div className={styles.main} >
       <Link href="/"><h1 className='mb-14 text-4xl font-extralight pl-4 pt-6 text-white' >The <span className='font-extrabold'>OCTULUS</span></h1></Link>
@@ -36,7 +31,7 @@ const movies = ({ collections }: Props) => {
 
 export default movies
 
-export const getServerSideProps: GetServerSideProps = async () =>
+export const getServerSideProps = async () =>
 {
   const query = `
     *[_type == 'movies']{
