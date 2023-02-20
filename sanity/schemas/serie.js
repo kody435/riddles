@@ -23,7 +23,7 @@ export default {
       type: "string",
     },
     {
-      title: 'Url',
+      title: 'Url - https://vidsrc.me/',
       name: 'url',
       type: 'array',
       of: [{type: 'string'}]
