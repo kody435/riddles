@@ -4,7 +4,6 @@ import { useLayoutEffect, useState } from "react";
 import { Loader } from "../components/Loader";
 import {motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
-import { Analytics } from '@vercel/analytics/react';
 import Owner from '../components/Owner'
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -53,7 +52,6 @@ export default function App({ Component, pageProps }: AppProps) {
           <Owner />
         </motion.div>
       </AnimatePresence>
-      <Analytics />
     </>
   );
 }
