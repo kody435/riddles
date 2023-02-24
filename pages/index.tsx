@@ -11,7 +11,11 @@ const Home = () => {
     <div className={styles.main} >
       <Head>
         <title>OCTULUS</title>
-        <meta name="description" content="WebApp made by Param Patel, to watch Movies" />
+        <meta name="description" content="WebApp made by Param Patel, to watch Movies, Series and Animes" />
+        <meta property="og:title" content="Watch Movies, Series and Animes" />
+        <meta property="og:description" content="Only go to site for watching Movies, Series and Animes"/>
+        <meta property="og:url" content="https://riddles-mocha.vercel.app/"/>
+        <meta property="og:type" content="website"/>
         <link rel="icon" href="/favicon.ico" />
       </Head>
           
