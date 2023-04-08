@@ -23,10 +23,10 @@ export default {
       type: "string",
     },
     {
-      title: 'Url',
-      name: 'url',
-      type: 'array',
-      of: [{type: 'string'}]
+      title: "Url",
+      name: "url",
+      type: "array",
+      of: [{ type: "string" }],
     },
     {
       name: "categories",

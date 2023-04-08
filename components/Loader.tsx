@@ -18,8 +18,8 @@ const load = keyframes`
 
 const hiddenStyles = css`
   opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
+  pointer-events: none;
+  visibility: hidden;
 `;
 
 const StyledLoader = styled.div<Props>`

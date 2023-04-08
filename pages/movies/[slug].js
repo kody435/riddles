@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
-import { sanityClient } from '../../sanity'
-import React from 'react';
-import styles from '../../styles/Home.module.css'
+import { sanityClient } from "../../sanity";
+import React from "react";
+import styles from "../../styles/Home.module.css";
 
 const recipeQuery = `*[_type == 'movies' && slug.current == $slug][0]{
   title,
@@ -13,7 +13,7 @@ const recipeQuery = `*[_type == 'movies' && slug.current == $slug][0]{
   releaseDate,
 }`;
 
-export default function Post({data}) {
+export default function Post({ data }) {
   const { movie } = data;
 
   return (
@@ -43,12 +43,12 @@ export async function getStaticPaths() {
         "slug": slug.current
       }
     }`
-  )
+  );
 
   return {
     paths,
-    fallback: false
-  }
+    fallback: false,
+  };
 }
 
 export async function getStaticProps({ params }) {
@@ -56,8 +56,8 @@ export async function getStaticProps({ params }) {
   const movie = await sanityClient.fetch(recipeQuery, { slug });
   return {
     props: {
-      data: { movie }
+      data: { movie },
     },
-    revalidate : 10
-  }
+    revalidate: 10,
+  };
 }

@@ -42,6 +42,6 @@ export default {
       name: "releaseDate",
       title: "Release Year",
       type: "string",
-    }
+    },
   ],
 };
