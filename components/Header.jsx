@@ -60,11 +60,11 @@ export default function Example() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-black px-2 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
-              <Link href="/" className="mb-6">
-                <h1 className="text-2xl font-extralight pt-6 text-white">
+              <Link href="/" className="">
+                <h1 className="text-3xl font-extralight text-white">
                   The <span className="font-extrabold">OCTULUS</span>
                 </h1>
               </Link>
@@ -79,7 +79,7 @@ export default function Example() {
             </button>
           </div>
           <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
+            <div className=" divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <Link
                   href="/movies"
