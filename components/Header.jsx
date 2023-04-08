@@ -11,7 +11,7 @@ export default function Example() {
   return (
     <header className="bg-black ">
       <nav
-        className="flex items-center justify-between lg:px-0 mx-11"
+        className="flex items-center justify-between lg:px-0 mx-2 md:mx-11"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
