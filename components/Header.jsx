@@ -46,7 +46,7 @@ export default function Example() {
             SERIES
           </Link>
           <Link
-            href="/series"
+            href="/request"
             className="text-lg font-semibold leading-6 bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-emerald-500 hover:text-white"
           >
             REQUEST
@@ -94,7 +94,7 @@ export default function Example() {
                   SERIES
                 </Link>
                 <Link
-                  href="/series"
+                  href="/request"
                   className="-mx-3 block rounded-lg py-2 px-3 font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-emerald-500 "
                 >
                   REQUEST

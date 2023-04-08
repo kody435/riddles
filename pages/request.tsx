@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function request() {
+export default function request() {
   return (
     <div>request</div>
   )
