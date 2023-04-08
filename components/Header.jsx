@@ -11,12 +11,12 @@ export default function Example() {
   return (
     <header className="bg-black ">
       <nav
-        className="flex justify-between lg:px-0 mx-2 md:mx-11"
+        className="flex justify-between lg:px-0 mx-2 md:mx-11 my-4"
         aria-label="Global"
       >
         <div className="flex">
           <Link href="/" className="">
-            <h1 className="text-3xl md:text-4xl font-extralight my-4 text-white">
+            <h1 className="text-3xl md:text-4xl font-extralight text-white">
               The <span className="font-extrabold">OCTULUS</span>
             </h1>
           </Link>
@@ -32,22 +32,28 @@ export default function Example() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12"></Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end space-x-6">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center space-x-6 ">
+          <Link
+            href="/"
+            className="text-lg font-semibold text-gray-100 hover:text-white"
+          >
+            HOME
+          </Link>
           <Link
             href="/movies"
-            className="text-lg font-semibold leading-6 text-gray-100 hover:text-white"
+            className="text-lg font-semibold text-gray-100 hover:text-white"
           >
             MOVIES
           </Link>
           <Link
             href="/series"
-            className="text-lg font-semibold leading-6 text-gray-100 hover:text-white"
+            className="text-lg font-semibold text-gray-100 hover:text-white"
           >
             SERIES
           </Link>
           <Link
             href="/request"
-            className="text-lg font-semibold leading-6 bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-emerald-500 hover:text-white"
+            className="text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-emerald-500 hover:text-white"
           >
             REQUEST
           </Link>
@@ -81,6 +87,12 @@ export default function Example() {
           <div className="mt-6 flow-root">
             <div className=" divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
+                <Link
+                  href="/"
+                  className="-mx-3 block rounded-lg py-2 px-3 font-bold text-xl text-gray-200 "
+                >
+                  HOME
+                </Link>
                 <Link
                   href="/movies"
                   className="-mx-3 block rounded-lg py-2 px-3 font-bold text-xl text-gray-200 "

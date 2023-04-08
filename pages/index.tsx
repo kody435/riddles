@@ -47,7 +47,7 @@ const Home = () => {
           </div>
           <div className="flex justify-center items-center flex-col gap-40 md:flex-row md:gap-52 ">
             <Link
-              href="/movies"
+              href="/request"
               className="flex p-2 rounded-3xl hover:opacity-75"
             >
               <h2 className="text-5xl py-4 px-9 font-semibold lg:text-6xl bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white rounded-full">
