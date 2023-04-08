@@ -11,10 +11,10 @@ export default function Example() {
   return (
     <header className="bg-black ">
       <nav
-        className="flex items-center justify-between lg:px-0 mx-2 md:mx-11"
+        className="flex justify-between lg:px-0 mx-2 md:mx-11"
         aria-label="Global"
       >
-        <div className="flex lg:flex-1">
+        <div className="flex">
           <Link href="/" className="">
             <h1 className="text-3xl md:text-4xl font-extralight my-4 text-white">
               The <span className="font-extrabold">OCTULUS</span>
@@ -60,9 +60,9 @@ export default function Example() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-black px-2 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-black px-4 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="#" className="">
               <Link href="/" className="">
                 <h1 className="text-3xl font-extralight text-white">
                   The <span className="font-extrabold">OCTULUS</span>
@@ -71,7 +71,7 @@ export default function Example() {
             </a>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-100"
+              className="rounded-md text-gray-100"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>

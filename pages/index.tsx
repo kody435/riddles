@@ -27,7 +27,7 @@ const Home = () => {
 
       <main className={styles.index}>
         <div className="flex flex-col h-screen text-center justify-center items-center ">
-          <div className="flex justify-center items-center flex-col gap-40 md:flex-row md:gap-52 ">
+          <div className="flex justify-center items-center flex-col gap-0 md:flex-row md:gap-52 ">
             <Link
               href="/movies"
               className="flex p-2 hover:bg-white  rounded-3xl "
@@ -42,6 +42,16 @@ const Home = () => {
             >
               <h2 className="text-5xl p-4 font-extrabold lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-blue-400">
                 Series
+              </h2>
+            </Link>
+          </div>
+          <div className="flex justify-center items-center flex-col gap-40 md:flex-row md:gap-52 ">
+            <Link
+              href="/movies"
+              className="flex p-2 rounded-3xl hover:opacity-75"
+            >
+              <h2 className="text-5xl py-4 px-9 font-semibold lg:text-6xl bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white rounded-full">
+                Request
               </h2>
             </Link>
           </div>
