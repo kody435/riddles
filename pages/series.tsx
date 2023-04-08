@@ -1,6 +1,3 @@
-/* eslint-disable react/jsx-key */
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import type { GetServerSideProps } from "next";
 import Link from "next/link";
@@ -22,6 +19,7 @@ const movies = ({ collections }: Props) => {
             <Link
               href={`/series/${collection.slug.current}`}
               className="shadow-lg rounded-lg"
+              key=''
             >
               <div className="text-center">
                 <Image

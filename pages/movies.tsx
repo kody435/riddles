@@ -1,6 +1,3 @@
-/* eslint-disable react/jsx-key */
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import type { NextPage, GetServerSideProps } from "next";
 import Link from "next/link";
@@ -22,6 +19,7 @@ const movies = ({ collections }: Props) => {
             <Link
               href={`/movies/${collection.slug.current}`}
               className="shadow-lg rounded-lg"
+              key=''
             >
               <div className="text-center">
                 <Image
@@ -32,9 +30,9 @@ const movies = ({ collections }: Props) => {
                   width={150}
                   height={100}
                 />
-                <h2 className="text-white font-bolder text-md  ">
+                <h3 className="text-white font-bolder text-md  ">
                   {collection.title}
-                </h2>
+                </h3>
               </div>
             </Link>
           ))}
