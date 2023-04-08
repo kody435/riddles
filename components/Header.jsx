@@ -16,7 +16,7 @@ export default function Example() {
       >
         <div className="flex lg:flex-1">
           <Link href="/" className="">
-            <h1 className="text-2xl md:text-4xl font-extralight my-4 text-white">
+            <h1 className="text-3xl md:text-4xl font-extralight my-4 text-white">
               The <span className="font-extrabold">OCTULUS</span>
             </h1>
           </Link>
@@ -24,7 +24,7 @@ export default function Example() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-100"
+            className=" inline-flex items-center justify-center rounded-md text-gray-100"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
