@@ -19,7 +19,7 @@ const movies = ({ collections }: Props) => {
             <Link
               href={`/movies/${collection.slug.current}`}
               className="shadow-lg rounded-lg"
-              key=''
+              key=""
             >
               <div className="text-center">
                 <Image

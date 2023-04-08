@@ -1,23 +1,33 @@
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { useState } from "react";
+import { app, database } from "../firebaseConfig";
+import { collection, addDoc, getDocs } from "firebase/firestore";
 
-export default function Example() {
+const dbInstance = collection(database, "requests");
+export default function Request() {
   const [name, setName] = useState("");
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("Movies");
   const [year, setYear] = useState("");
 
-  const addRequest = (e) => {
-    const newValue = {name, category, year}
-    console.log(newValue);
-  }
+  const addRequest = () => {
+    addDoc(dbInstance, {
+      name: name,
+      category: category,
+      year: year,
+    }).then(() => {
+      alert("Request added");
+      setName("");
+      setCategory("Movies");
+      setYear("");
+    })
+  };
 
   return (
     <div className="isolate bg-white h-screen px-6 py-24 -z-10 sm:py-32 lg:px-8">
       <div
         className="absolute inset-x-10 top-[110rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
         aria-hidden="true"
-      >
-      </div>
+      ></div>
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Request a Movie or Series
@@ -68,16 +78,12 @@ export default function Example() {
             <label
               htmlFor="first-name"
               className="block text-sm font-semibold leading-6 text-gray-900"
-              
             >
               Release Year
             </label>
             <div className="mt-2.5">
               <input
-                type="text"
-                name="first-name"
-                id="first-name"
-                autoComplete="given-name"
+                type="number"
                 value={year}
                 onChange={(e) => setYear(e.target.value)}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"

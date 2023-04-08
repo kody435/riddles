@@ -21,7 +21,8 @@
     "**/*.tsx",
     "pages/movies/[slug].js",
     "pages/search.tsx",
-    "pages/series/[slug].js"
-, "pages/request.jsx"  ],
+    "pages/series/[slug].js",
+    "pages/request.jsx"
+  ],
   "exclude": ["node_modules"]
 }
