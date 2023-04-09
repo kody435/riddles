@@ -19,9 +19,9 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/movies/[slug].js",
+    "pages/movies/[slug].jsx",
     "pages/search.tsx",
-    "pages/series/[slug].js",
+    "pages/series/[slug].jsx",
     "pages/request.jsx"
   ],
   "exclude": ["node_modules"]

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { sanityClient } from "../sanity";
 import { Collection } from "../typings";
 import styles from "../styles/Home.module.css";
+import Head from "next/head";
 
 interface Props {
   collections: Collection[];
@@ -13,6 +14,21 @@ interface Props {
 const movies = ({ collections }: Props) => {
   return (
     <div className={styles.main}>
+      <Head>
+        <title>OCTULUS | Movies</title>
+        <meta
+          name="description"
+          content="WebApp made by Param Patel, to watch Movies, Series and Animes"
+        />
+        <meta property="og:title" content="Watch Movies, Series and Animes" />
+        <meta
+          property="og:description"
+          content="Only go-to site for watching Movies, Series and Animes"
+        />
+        <meta property="og:url" content="https://riddles-mocha.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <main className="container mx-auto my-10 px-4">
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6">
           {collections.map((collection) => (

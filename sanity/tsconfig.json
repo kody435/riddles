@@ -5,6 +5,17 @@
   "include": [
     "./node_modules/@sanity/base/types/**/*.ts",
     "./**/*.ts",
-    "./**/*.tsx"
+    "./**/*.tsx",
+    "./**/*.d.ts",
+    "./**/*.js",
+    "./**/*.jsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "coverage",
+    "build",
+    "scripts",
+    "packages/@sanity/desk-tool/src/panes/documentPane/documentHistory/legacyHistory"
   ]
 }

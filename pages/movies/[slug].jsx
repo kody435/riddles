@@ -3,6 +3,7 @@
 import { sanityClient } from "../../sanity";
 import React from "react";
 import styles from "../../styles/Home.module.css";
+import Head from "next/head";
 
 const recipeQuery = `*[_type == 'movies' && slug.current == $slug][0]{
   title,
@@ -18,6 +19,21 @@ export default function Post({ data }) {
 
   return (
     <div className={styles.main}>
+      <Head>
+        <title>OCTULUS | {movie.title}</title>
+        <meta
+          name="description"
+          content="WebApp made by Param Patel, to watch Movies, Series and Animes"
+        />
+        <meta property="og:title" content="Watch Movies, Series and Animes" />
+        <meta
+          property="og:description"
+          content="Only go-to site for watching Movies, Series and Animes"
+        />
+        <meta property="og:url" content="https://riddles-mocha.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <iframe src={movie.url} className="w-screen h-screen" allowFullScreen />
       <h1 className="pl-5 text-3xl pt-8 w-screen mr-2 text-white">
         {movie.title}

@@ -28,6 +28,11 @@ export default {
       type: "string",
     },
     {
+      name: "imdb",
+      title: "IMDB ID",
+      type: "string",
+    },
+    {
       name: "categories",
       title: "Categories",
       type: "array",
