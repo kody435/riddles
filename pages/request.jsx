@@ -46,14 +46,14 @@ export default function Request() {
   };
 
   return (
-    <div className="isolate bg-white h-screen px-6 py-24 -z-10 sm:py-32 lg:px-8">
+    <div className="isolate bg-black h-screen px-6 py-24 -z-10 sm:py-32 lg:px-8">
       <Toaster />
       <div
         className="absolute inset-x-10 top-[110rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
         aria-hidden="true"
       ></div>
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
           Request a Movie or Series
         </h2>
       </div>
@@ -66,7 +66,7 @@ export default function Request() {
           <div className="sm:col-span-2">
             <label
               htmlFor="phone-number"
-              className="block text-sm font-semibold leading-6 text-gray-900"
+              className="block text-sm font-semibold leading-6 text-gray-200"
             >
               Name of the Movie or Series<span className="text-red-500">*</span>
             </label>
@@ -102,7 +102,7 @@ export default function Request() {
           <div>
             <label
               htmlFor="first-name"
-              className="block text-sm font-semibold leading-6 text-gray-900"
+              className="block text-sm font-semibold leading-6 text-gray-200"
             >
               Release Year<span className="text-red-500">*</span>
             </label>
@@ -119,9 +119,9 @@ export default function Request() {
           <div>
             <label
               htmlFor="first-name"
-              className="block text-sm font-semibold leading-6 text-gray-900"
+              className="block text-sm font-semibold leading-6 text-gray-200"
             >
-              IMDB Link / ID <span className="text-gray-600">(optional)</span>
+              IMDB Link / ID <span className="text-gray-400">(optional)</span>
             </label>
             <div className="mt-2.5">
               <input
@@ -141,7 +141,7 @@ export default function Request() {
             REQUEST
           </div>
         </div>
-        <div className="text-black text-xl flex justify-center mt-10">
+        <div className="text-white text-lg flex justify-center mt-10">
           Check if it is the already being requested?{" "}&nbsp;
           <Link
             href="/requested"
