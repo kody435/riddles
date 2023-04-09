@@ -74,6 +74,6 @@ export async function getStaticProps({ params }) {
     props: {
       data: { movie },
     },
-    revalidate: 10,
+    // revalidate: 10,
   };
 }

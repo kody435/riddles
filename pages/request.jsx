@@ -3,6 +3,7 @@ import { useState } from "react";
 import { app, database } from "../firebaseConfig";
 import { collection, addDoc, getDocs } from "firebase/firestore";
 import toast, { Toaster } from "react-hot-toast";
+import Link from "next/link";
 
 const dbInstance = collection(database, "requests");
 export default function Request() {
@@ -12,21 +13,6 @@ export default function Request() {
   const [imdb, setImdb] = useState("");
 
   const addRequest = (e) => {
-    /*
-    addDoc(dbInstance, {
-      name: name,
-      category: category,
-      year: year,
-    }).then(() => {
-      toast.success("Request added");
-      setName("");
-      setCategory("Movies");
-      setYear("");
-    }).catch((error) => {
-      toast.error("Request failed");
-    });
-    */
-
     if (name === "") {
       toast.error("Please enter a name");
       return;
@@ -132,17 +118,17 @@ export default function Request() {
           </div>
           <div>
             <label
-              for="first-name"
-              class="block text-sm font-semibold leading-6 text-gray-900"
+              htmlFor="first-name"
+              className="block text-sm font-semibold leading-6 text-gray-900"
             >
               IMDB Link / ID <span className="text-gray-600">(optional)</span>
             </label>
-            <div class="mt-2.5">
+            <div className="mt-2.5">
               <input
                 type="text"
                 value={imdb}
                 onChange={(e) => setImdb(e.target.value)}
-                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -154,6 +140,15 @@ export default function Request() {
           >
             REQUEST
           </div>
+        </div>
+        <div className="text-black text-xl flex justify-center mt-10">
+          Check if it is the already being requested?{" "}&nbsp;
+          <Link
+            href="/requested"
+            className="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%"
+          >
+            REQUESTED
+          </Link>
         </div>
       </form>
     </div>

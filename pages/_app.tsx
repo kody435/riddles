@@ -15,9 +15,9 @@ export default function App({ Component, pageProps }: AppProps) {
     root?.removeChild(loader!);
   };
 
-  useLayoutEffect(() => {
-    setTimeout(() => setIsLoading(false), 1400);
-  }, []);
+  // useLayoutEffect(() => {
+  //   setTimeout(() => setIsLoading(false), 1400);
+  // }, []);
 
   const router = useRouter();
 
