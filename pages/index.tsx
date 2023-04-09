@@ -33,7 +33,7 @@ const Home = () => {
               className="flex p-2 hover:bg-white  rounded-3xl "
             >
               <h2 className="text-5xl p-4 font-extrabold lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-teal-400">
-                Movies
+                MOVIES
               </h2>
             </Link>
             <Link
@@ -41,7 +41,7 @@ const Home = () => {
               className="flex p-2 hover:bg-white rounded-3xl "
             >
               <h2 className="text-5xl p-4 font-extrabold lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-blue-400">
-                Series
+                SERIES
               </h2>
             </Link>
           </div>
@@ -50,8 +50,8 @@ const Home = () => {
               href="/request"
               className="flex p-2 rounded-3xl hover:opacity-75"
             >
-              <h2 className="text-5xl py-4 px-9 font-semibold lg:text-6xl bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white rounded-full">
-                Request
+              <h2 className="text-5xl pt-4 pb-4 px-9 font-semibold lg:text-6xl bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white rounded-full">
+                REQUEST
               </h2>
             </Link>
           </div>

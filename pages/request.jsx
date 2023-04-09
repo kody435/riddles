@@ -9,8 +9,10 @@ export default function Request() {
   const [name, setName] = useState("");
   const [category, setCategory] = useState("Movies");
   const [year, setYear] = useState("");
+  const [imdb, setImdb] = useState("");
 
-  const addRequest = () => {
+  const addRequest = (e) => {
+    /*
     addDoc(dbInstance, {
       name: name,
       category: category,
@@ -23,6 +25,38 @@ export default function Request() {
     }).catch((error) => {
       toast.error("Request failed");
     });
+    */
+
+    if (name === "") {
+      toast.error("Please enter a name");
+      return;
+    } else if (year === "") {
+      toast.error("Please enter a year");
+      return;
+    } else if (year.length !== 4) {
+      toast.error("Please enter a valid year");
+      return;
+    } else if (year < 1980 || year > 2023) {
+      toast.error("Please enter a valid year");
+      return;
+    } else {
+      addDoc(dbInstance, {
+        name: name,
+        category: category,
+        year: year,
+        imdb: imdb,
+      })
+        .then(() => {
+          toast.success("Request added");
+          setName("");
+          setCategory("Movies");
+          setYear("");
+          setImdb("");
+        })
+        .catch((error) => {
+          toast.error("Request failed");
+        });
+    }
   };
 
   return (
@@ -73,8 +107,9 @@ export default function Request() {
               <input
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                required
                 type="text"
-                className="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-100 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-100 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
               />
             </div>
           </div>
@@ -89,8 +124,25 @@ export default function Request() {
               <input
                 type="number"
                 value={year}
+                required
                 onChange={(e) => setYear(e.target.value)}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
+          <div>
+            <label
+              for="first-name"
+              class="block text-sm font-semibold leading-6 text-gray-900"
+            >
+              IMDB Link / ID
+            </label>
+            <div class="mt-2.5">
+              <input
+                type="text"
+                value={imdb}
+                onChange={(e) => setImdb(e.target.value)}
+                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
