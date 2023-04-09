@@ -2,6 +2,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { useState } from "react";
 import { app, database } from "../firebaseConfig";
 import { collection, addDoc, getDocs } from "firebase/firestore";
+import toast, { Toaster } from "react-hot-toast";
 
 const dbInstance = collection(database, "requests");
 export default function Request() {
@@ -15,15 +16,18 @@ export default function Request() {
       category: category,
       year: year,
     }).then(() => {
-      alert("Request added");
+      toast.success("Request added");
       setName("");
       setCategory("Movies");
       setYear("");
-    })
+    }).catch((error) => {
+      toast.error("Request failed");
+    });
   };
 
   return (
     <div className="isolate bg-white h-screen px-6 py-24 -z-10 sm:py-32 lg:px-8">
+      <Toaster />
       <div
         className="absolute inset-x-10 top-[110rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
         aria-hidden="true"
