@@ -141,13 +141,13 @@ export default function Request() {
             REQUEST
           </div>
         </div>
-        <div className="text-white text-lg flex justify-center mt-10">
-          Check if it is the already being requested?{" "}&nbsp;
+        <div className="text-white text-lg flex justify-center items-center mt-10 flex-col sm:flex-row">
+          <div>Check if already requested? &nbsp;</div>
           <Link
             href="/requested"
             className="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%"
           >
-            REQUESTED
+            REQUESTED ↗
           </Link>
         </div>
       </form>
