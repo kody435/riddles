@@ -82,7 +82,7 @@ export default function Request() {
               htmlFor="phone-number"
               className="block text-sm font-semibold leading-6 text-gray-900"
             >
-              Name of the Movie or Series
+              Name of the Movie or Series<span className="text-red-500">*</span>
             </label>
             <div className="relative mt-2.5">
               <div className="absolute inset-y-0 left-0 flex items-center">
@@ -118,7 +118,7 @@ export default function Request() {
               htmlFor="first-name"
               className="block text-sm font-semibold leading-6 text-gray-900"
             >
-              Release Year
+              Release Year<span className="text-red-500">*</span>
             </label>
             <div className="mt-2.5">
               <input
@@ -135,7 +135,7 @@ export default function Request() {
               for="first-name"
               class="block text-sm font-semibold leading-6 text-gray-900"
             >
-              IMDB Link / ID
+              IMDB Link / ID <span className="text-gray-600">(optional)</span>
             </label>
             <div class="mt-2.5">
               <input
