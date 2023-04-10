@@ -35,25 +35,25 @@ export default function Example() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center space-x-6 ">
           <Link
             href="/"
-            className="text-lg font-semibold text-gray-100 hover:text-white"
+            className="text-lg font-semibold text-gray-100 hover:text-white hover:border-b-2"
           >
             HOME
           </Link>
           <Link
             href="/movies"
-            className="text-lg font-semibold text-gray-100 hover:text-white"
+            className="text-lg font-semibold text-gray-100 hover:text-white hover:border-b-2"
           >
             MOVIES
           </Link>
           <Link
             href="/series"
-            className="text-lg font-semibold text-gray-100 hover:text-white"
+            className="text-lg font-semibold text-gray-100 hover:text-white hover:border-b-2"
           >
-            SERIES
+            TV SHOWS
           </Link>
           <Link
             href="/request"
-            className="text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-emerald-500 hover:text-white"
+            className="text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-emerald-500 hover:text-white hover:border-b-2"
           >
             REQUEST
           </Link>

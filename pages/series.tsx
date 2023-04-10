@@ -13,9 +13,9 @@ interface Props {
 
 const movies = ({ collections }: Props) => {
   return (
-    <div className={styles.main}>
+    <div className="h-screen bg-black">
       <Head>
-        <title>OCTULUS | Series</title>
+        <title>OCTULUS | TV SHOWS</title>
         <meta
           name="description"
           content="WebApp made by Param Patel, to watch Movies, Series and Animes"
