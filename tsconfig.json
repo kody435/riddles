@@ -22,7 +22,8 @@
     "pages/movies/[slug].jsx",
     "pages/search.tsx",
     "pages/series/[slug].jsx",
-    "pages/request.jsx"
-, "pages/_document.jsx"  ],
+    "pages/request.jsx",
+    "pages/_document.jsx"
+  ],
   "exclude": ["node_modules"]
 }

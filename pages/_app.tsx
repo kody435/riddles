@@ -5,11 +5,6 @@ import { useRouter } from "next/router";
 import Header from "../components/Header";
 
 export default function App({ Component, pageProps }: AppProps) {
-
-  // useLayoutEffect(() => {
-  //   setTimeout(() => setIsLoading(false), 1400);
-  // }, []);
-
   const router = useRouter();
 
   return (
@@ -36,7 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
             },
           }}
         >
-          <Header />
+          {router.pathname !== "/" && <Header />}
           <Component {...pageProps} />
         </motion.div>
       </AnimatePresence>
