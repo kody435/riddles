@@ -9,13 +9,13 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-black ">
+    <header className="bg-black overflow-hidden">
       <nav
-        className="flex justify-between lg:px-0 mx-2 md:mx-11 my-4"
+        className="flex justify-between lg:px-0 mx-2 md:mx-11 my-4 overflow-hidden"
         aria-label="Global"
       >
-        <div className="flex">
-          <Link href="/" className="">
+        <div className="overflow-hidden">
+          <Link href="/" className="overflow-hidden">
             <h1 className="text-3xl md:text-4xl font-extralight text-white">
               The <span className="font-extrabold">OCTULUS</span>
             </h1>
