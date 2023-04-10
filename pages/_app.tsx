@@ -1,18 +1,10 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { useLayoutEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import Header from "../components/Header";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-
-  const handleTransitionEnd = () => {
-    const root = document.getElementById("__next");
-    const loader = document.getElementById("loader");
-    root?.removeChild(loader!);
-  };
 
   // useLayoutEffect(() => {
   //   setTimeout(() => setIsLoading(false), 1400);

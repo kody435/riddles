@@ -25,7 +25,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.index}>
+      <main>
         <div className="flex flex-col h-screen text-center justify-center items-center ">
           <div className="flex justify-center items-center flex-col gap-0 md:flex-row md:gap-52 ">
             <Link
