@@ -1,7 +1,6 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { useLayoutEffect, useState } from "react";
-import { Loader } from "../components/Loader";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import Header from "../components/Header";
@@ -23,7 +22,6 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <Loader onTransitionEnd={handleTransitionEnd} isLoading={isLoading} />
       <AnimatePresence>
         <motion.div
           key={router.route}
