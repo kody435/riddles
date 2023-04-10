@@ -29,7 +29,7 @@ const Home = () => {
       <main className="h-screen bg-white text-black flex items-center ">
         <div className="">
         {/* Header start */}
-          <div className="grid grid-cols-1 md:grid-cols-2 pt-32 md:pt-0 ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 pt-32 lg:pt-0 ">
             {/* LEFT header */}
             <div className="flex items-center justify-center mt-12">
               <div className="shadow-lg rounded-lg">
@@ -52,10 +52,10 @@ const Home = () => {
             {/* RIGHT header */}
 
             <div className="flex flex-col items-center justify-center gap-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl text-center md:text-left font-bold scrollbar-none">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl text-center lg:text-left font-bold scrollbar-none">
                 Watch your<br></br> Favourite Movies <br></br> & TV Shows
               </h1>
-              <h3 className="text-center md:text-left mx-20 text-gray-700 ">
+              <h3 className="text-center lg:text-left mx-20 text-gray-700 ">
                 Explore a vast library of top-rated films and binge-worthy
                 series, all at your fingertips. Dive into countless genres and
                 enjoy seamless streaming, tailored to your unique taste. Start
