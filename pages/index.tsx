@@ -24,61 +24,59 @@ const Home = () => {
         <meta property="og:url" content="https://riddles-mocha.vercel.app/" />
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <main className="h-screen bg-black text-white flex items-center ">
-        <div className="">
-          {/* Header start */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 pt-32 lg:pt-0 ">
-            {/* LEFT header */}
-            <div className="">
-              <div className="flex items-center justify-center mt-12 lg:mt-0">
-                <div className="shadow-lg rounded-lg">
-                  <div className="text-center">
-                    <Image
-                      alt=""
-                      className="rounded-xl"
-                      src="https://image.tmdb.org/t/p/w300/bOFaAXmWWXC3Rbv4u4uM9ZSzRXP.jpg"
-                      loading="lazy"
-                      width={300}
-                      height={450}
-                    />
-                    {/* <h3 className="text-white font-bolder text-md ">
+      <main className="h-screen bg-black text-white flex items-center  ">
+        {/* Header start */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 pt-32 lg:pt-0 ">
+          {/* LEFT header */}
+          <div className="flex justify-center items-center">
+            <div className="flex items-center justify-center mt-12 lg:mt-0">
+              <div className="shadow-lg rounded-lg">
+                <div className="text-center">
+                  <Image
+                    alt=""
+                    className="rounded-xl"
+                    src="https://image.tmdb.org/t/p/w300/bOFaAXmWWXC3Rbv4u4uM9ZSzRXP.jpg"
+                    loading="lazy"
+                    width={300}
+                    height={450}
+                  />
+                  {/* <h3 className="text-white font-bolder text-md ">
                           Fast and Furious 9
                         </h3> 
                     */}
-                  </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* RIGHT header */}
-            <div className="flex flex-col items-center justify-center gap-4 mt-5 lg:mt-0 text-black bg-green-300 pt-8 lg:pt-0 lg:rounded-l-3xl  rounded-none">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl text-center lg:text-left font-bold scrollbar-none">
-                Watch your<br></br> Favourite Movies <br></br> & TV Shows
-              </h1>
-              <h3 className="text-center lg:text-left mx-20 text-black">
-                Explore a vast library of top-rated films and binge-worthy
-                series, all at your fingertips. Dive into countless genres and
-                enjoy seamless streaming, tailored to your unique taste. Start
-                your next adventure in entertainment today.
-              </h3>
+          {/* RIGHT header */}
+          <div className="flex lg:h-screen flex-col items-center justify-center gap-4 mt-5 lg:mt-0 text-black pt-8 bg-emerald-300 lg:pt-0 rounded-none lg:rounded-l-3xl">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl text-center lg:text-left font-bold scrollbar-none mx-0 lg:mx-10 md:mx-5">
+              Watch your Favourite Movie & TV Shows
+            </h1>
+            <h3 className="text-center lg:text-left mx-3 lg:mx-10 md:mx-5">
+              Explore a vast library of top-rated films and binge-worthy series,
+              all at your fingertips. Dive into countless genres and enjoy
+              seamless streaming, tailored to your unique taste. Start your next
+              adventure in entertainment today.
+            </h3>
 
-              <div className="flex flex-row mb-10 lg:mb-0 mt-10">
-                <Link
-                  href="/movies"
-                  className="flex justify-center items-left text-xl text-white bg-black px-7 py-3 font-bold rounded-full "
-                >
-                  Play Now
-                </Link>
-              </div>
+            <div className="flex flex-row mb-10 lg:mb-0 mt-10">
+              <Link
+                href="/movies"
+                className="flex justify-center items-left text-xl bg-black text-white px-7 py-3 mb-0 lg:mb-5 font-bold rounded-full "
+              >
+                Play Now
+              </Link>
             </div>
           </div>
         </div>
         {/* Header finish */}
 
         {/* Footer start */}
-        
       </main>
     </div>
   );
