@@ -37,14 +37,16 @@ export default function Example() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center space-x-6 ">
           <Link
             href="/"
-            className={`text-lg font-semibold text-gray-100 hover:text-white hover:border-b-4 active:border-emerald-400 rounded-sm`}
+            className={`text-lg font-semibold text-gray-100 hover:text-white hover:border-b-4 hover:border-emerald-400 rounded-sm`}
           >
             HOME
           </Link>
           <Link
             href="/movies"
-            className={`text-lg font-semibold text-gray-100 hover:text-white active:border-emerald-400 rounded-sm ${
-              router.pathname === "/movies" ? "border-b-4 border-white" : ""
+            className={`text-lg font-semibold text-gray-100 hover:text-white hover:border-emerald-400 rounded-sm ${
+              router.pathname === "/movies"
+                ? "border-b-4 border-white"
+                : "hover:border-b-4 border-emerald-400"
             }}`}
           >
             MOVIES
@@ -52,15 +54,19 @@ export default function Example() {
           <Link
             href="/series"
             className={`text-lg font-semibold text-gray-100 hover:text-white active:border-emerald-400 rounded-sm ${
-              router.pathname === "/series" ? "border-b-4 border-white" : ""
+              router.pathname === "/series"
+                ? "border-b-4 border-white"
+                : "hover:border-b-4 border-emerald-400"
             }`}
           >
             TV SHOWS
           </Link>
           <Link
             href="/request"
-            className={`text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-emerald-500 hover:text-white hover:border-b-4 active:border-emerald-40 rounded-sm ${
-              router.pathname === "/request" ? "border-b-4 border-white hover:text-transparent" : ""
+            className={`text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-emerald-500 hover:text-white hover:border-b-4 active:border-emerald-400 rounded-sm ${
+              router.pathname === "/request"
+                ? "border-b-4 border-white hover:text-transparent"
+                : "hover:border-b-4 border-emerald-400"
             }`}
           >
             REQUEST
