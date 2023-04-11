@@ -76,6 +76,9 @@ const Home = () => {
           </div>
         </div>
         {/* Header finish */}
+
+        {/* Footer start */}
+        
       </main>
     </div>
   );
