@@ -43,10 +43,10 @@ export default function Example() {
           </Link>
           <Link
             href="/movies"
-            className={`text-lg font-semibold text-gray-100 hover:text-white hover:border-emerald-400 rounded-sm ${
+            className={`text-lg font-semibold text-gray-100 hover:text-white rounded-sm ${
               router.pathname === "/movies"
                 ? "border-b-4 border-white"
-                : "hover:border-b-4 border-emerald-400"
+                : "hover:border-b-4 border-emerald-400 hover:border-emerald-400"
             }}`}
           >
             MOVIES
