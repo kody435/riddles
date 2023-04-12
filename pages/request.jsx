@@ -14,6 +14,10 @@ export default function Request() {
   const [year, setYear] = useState("");
   const [imdb, setImdb] = useState("");
 
+  function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
   const addRequest = (e) => {
     if (name === "") {
       toast.error("Please enter a name");
@@ -34,18 +38,15 @@ export default function Request() {
         year: year,
         imdb: imdb,
       })
-        .then(() => {
-          toast.success("Request added");
+        .then(async () => {
           setName("");
           setCategory("Movies");
           setYear("");
           setImdb("");
+          toast.success("Request added");
+          await sleep(2000);
+          router.push("/requested");
         })
-        .catch((error) => {
-          toast.error("Request failed");
-        }).finally(() => {
-          router.push('/requested');
-        });
     }
   };
 
