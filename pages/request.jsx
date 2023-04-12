@@ -57,7 +57,7 @@ export default function Request() {
         aria-hidden="true"
       ></div>
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl py-2 ">
           Request a Movie or Series
         </h2>
       </div>
