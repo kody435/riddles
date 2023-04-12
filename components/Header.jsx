@@ -16,13 +16,11 @@ export default function Example() {
         className="flex justify-between lg:px-0 mx-2 md:mx-11 my-4 overflow-hidden"
         aria-label="Global"
       >
-        <div className="overflow-hidden">
           <Link href="/" className="overflow-hidden">
-            <h1 className="text-3xl md:text-4xl font-extralight text-white">
+            <h1 className="text-3xl md:text-4xl font-extralight text-white md:py-1">
               The <span className="font-extrabold">OCTULUS</span>
             </h1>
           </Link>
-        </div>
         <div className="flex lg:hidden">
           <button
             type="button"

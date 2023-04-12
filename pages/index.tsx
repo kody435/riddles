@@ -54,7 +54,7 @@ const Home = () => {
 
           {/* RIGHT header */}
           <div className="flex lg:h-screen flex-col items-center justify-center gap-4 mt-5 lg:mt-0 text-black pt-8 bg-emerald-300 lg:pt-0 rounded-none lg:rounded-l-3xl">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl text-center lg:text-left font-bold scrollbar-none mx-0 lg:mx-10 md:mx-5">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl text-center lg:text-left font-bold scrollbar-none mx-0 lg:mx-10 md:mx-5 py-1 md:py-2">
               Watch your Favourite Movie & TV Shows
             </h1>
             <h3 className="text-center lg:text-left mx-3 lg:mx-10 md:mx-5">
