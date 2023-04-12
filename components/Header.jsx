@@ -105,25 +105,33 @@ export default function Example() {
                   href="/"
                   className="-mx-3 block rounded-lg py-2 px-3 font-bold text-xl text-gray-200 "
                 >
+                  <div className="w-fit border-b-2">
                   HOME
+                  </div>
                 </Link>
                 <Link
                   href="/movies"
                   className="-mx-3 block rounded-lg py-2 px-3 font-bold text-xl text-gray-200 "
                 >
+                  <div className="border-b-2 w-fit">
                   MOVIES
+                  </div>
                 </Link>
                 <Link
                   href="/series"
                   className="-mx-3 block rounded-lg py-2 px-3 font-bold text-xl text-gray-200 "
                 >
+                  <div className="border-b-2 w-fit">
                   SERIES
+                  </div>
                 </Link>
                 <Link
                   href="/request"
-                  className="-mx-3 block rounded-lg py-2 px-3 font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-emerald-500 "
+                  className="-mx-3 block rounded-lg py-2 px-3 font-bold text-xl "
                 >
+                  <div className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-emerald-500 w-fit border-b-2">
                   REQUEST
+                  </div>
                 </Link>
               </div>
             </div>

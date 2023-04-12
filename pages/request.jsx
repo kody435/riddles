@@ -4,9 +4,11 @@ import { app, database } from "../firebaseConfig";
 import { collection, addDoc, getDocs } from "firebase/firestore";
 import toast, { Toaster } from "react-hot-toast";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const dbInstance = collection(database, "requests");
 export default function Request() {
+  const router = useRouter();
   const [name, setName] = useState("");
   const [category, setCategory] = useState("Movies");
   const [year, setYear] = useState("");
@@ -41,6 +43,8 @@ export default function Request() {
         })
         .catch((error) => {
           toast.error("Request failed");
+        }).finally(() => {
+          router.push('/requested');
         });
     }
   };
