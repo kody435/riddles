@@ -17,7 +17,7 @@ export default function Example() {
         aria-label="Global"
       >
           <Link href="/" className="overflow-hidden">
-            <h1 className="text-3xl md:text-4xl font-extralight text-white md:py-1">
+            <h1 className="text-3xl md:text-4xl font-extralight text-white py-1">
               The <span className="font-extrabold">OCTULUS</span>
             </h1>
           </Link>
@@ -82,7 +82,7 @@ export default function Example() {
           <div className="flex items-center justify-between">
             <a href="#" className="">
               <Link href="/" className="">
-                <h1 className="text-3xl font-extralight text-white">
+                <h1 className="text-3xl font-extralight text-white py-1">
                   The <span className="font-extrabold">OCTULUS</span>
                 </h1>
               </Link>
