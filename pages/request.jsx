@@ -13,6 +13,7 @@ export default function Request() {
   const [category, setCategory] = useState("Movies");
   const [year, setYear] = useState("");
   const [imdb, setImdb] = useState("");
+  const [fulfilled, setFulfilled] = useState("No");
 
   function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
@@ -37,6 +38,7 @@ export default function Request() {
         category: category,
         year: year,
         imdb: imdb,
+        fulfilled: fulfilled,
       })
         .then(async () => {
           setName("");

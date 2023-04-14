@@ -29,9 +29,9 @@ const Home = () => {
 
       <main className="h-screen bg-black text-white flex items-center  ">
         {/* Header start */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 pt-32 lg:pt-0 ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:pt-0 ">
           {/* LEFT header */}
-          <div className="flex justify-center items-center">
+          <div className="hidden lg:flex justify-center items-center">
             <div className="flex items-center justify-center mt-12 lg:mt-0">
               <div className="shadow-lg rounded-lg">
                 <div className="text-center">
@@ -53,7 +53,7 @@ const Home = () => {
           </div>
 
           {/* RIGHT header */}
-          <div className="flex lg:h-screen flex-col items-center justify-center gap-4 mt-5 lg:mt-0 text-black pt-8 bg-emerald-300 lg:pt-0 rounded-none lg:rounded-l-3xl">
+          <div className="flex lg:h-screen h-screen flex-col items-center justify-center gap-4 lg:mt-0 text-black pt-8 bg-emerald-300 lg:pt-0 rounded-none lg:rounded-l-3xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl text-center lg:text-left font-bold scrollbar-none mx-0 lg:mx-10 md:mx-5 py-2 md:py-2 lg:py-4">
               Watch your Favourite Movie & TV Shows
             </h1>
