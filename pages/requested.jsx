@@ -104,9 +104,6 @@ export default function Requests() {
                   <dt class="text-md font-medium text-gray-400">
                     Release Year: {request.year}
                   </dt>
-                  <dt class="text-md font-medium text-gray-400">
-                    Fulfilled : {request.fulfilled}
-                  </dt>
                 </div>
               </dl>
             </div>
